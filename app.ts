@@ -1,26 +1,9 @@
 // diobanking
+import {PeopleAccount} from './class/PeopleAccount'
+import {CompanyAccount} from './class/CompanyAccount'
 
-class Account {
-    name: string
-    accountNumber: number
+const newPeople: PeopleAccount = new PeopleAccount('Jr', 1, 123)
+console.log(newPeople)
 
-    constructor(name: string, accountNumber: number){
-        this.name = name
-        this.accountNumber = accountNumber
-    }
-
-
-    deposit = () => {
-        console.log('Voce depositou')
-    }
-
-    withdraw = () => {
-        console.log('Voce sacou')
-    }
-}
-
-const newAccount: Account = new Account('Jr',1)
-console.log(newAccount)
-
-const account: Account = new Account('Jhon', 2)
-account.deposit()
+const companyAccount: CompanyAccount = new CompanyAccount('teste', 2)
+console.log(companyAccount)
