@@ -1,21 +1,26 @@
-interface Pessoa {
-    nome: string,
-    idade: number,
-    profissao?: string
+// diobanking
+
+class Account {
+    name: string
+    accountNumber: number
+
+    constructor(name: string, accountNumber: number){
+        this.name = name
+        this.accountNumber = accountNumber
+    }
+
+
+    deposit = () => {
+        console.log('Voce depositou')
+    }
+
+    withdraw = () => {
+        console.log('Voce sacou')
+    }
 }
 
-const pessoa: Pessoa = {
-    nome: 'Eu',
-    idade: 23
-}
+const newAccount: Account = new Account('Jr',1)
+console.log(newAccount)
 
-const pessoa2: Pessoa = {
-    nome: 'Teste',
-    idade: 24,
-    profissao: 'Dev'
-}
-
-const arrayteste: Pessoa[] = [
-    pessoa,
-    pessoa2
-]
+const account: Account = new Account('Jhon', 2)
+account.deposit()
