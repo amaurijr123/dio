@@ -11,7 +11,16 @@ people.deposit(100)
 company.getLoan(130)
 strange.deposit(200)
 
+
 console.log('Saldo de ' + strange.getAccountNumber() +' : '+ strange.getBalance())
 people.withdraw(20)
 console.log('Saldo de '+ people.getAccountNumber() + ' : ' + people.getBalance())
 console.log('Saldo de '+ company.getAccountNumber() + ' : ' + company.getBalance())
+
+console.log(people.getName())
+console.log(company.getName())
+console.log(strange.getName())
+
+people.cancelAccount()
+company.cancelAccount()
+strange.cancelAccount()
