@@ -1,12 +1,17 @@
 // diobanking
 import {PeopleAccount} from './class/PeopleAccount'
 import {CompanyAccount} from './class/CompanyAccount'
+import {StrangeAccount} from './class/StrangeAccount'
 
-const newPeople: PeopleAccount = new PeopleAccount('Jr', 1, 123)
-newPeople.deposit(30)
-newPeople.getBalance()
-newPeople.withdraw(10)
-newPeople.getBalance()
+const people: PeopleAccount = new PeopleAccount('Jun', 1, 1)
+const company: CompanyAccount = new CompanyAccount('Dio', 2)
+const strange: StrangeAccount = new StrangeAccount('Stephen', 3)
 
-// const companyAccount: CompanyAccount = new CompanyAccount('teste', 2)
-// companyAccount.deposit()
+people.deposit(100)
+company.getLoan(130)
+strange.deposit(200)
+
+console.log('Saldo de ' + strange.getAccountNumber() +' : '+ strange.getBalance())
+people.withdraw(20)
+console.log('Saldo de '+ people.getAccountNumber() + ' : ' + people.getBalance())
+console.log('Saldo de '+ company.getAccountNumber() + ' : ' + company.getBalance())
